@@ -1,0 +1,163 @@
+@import "bootstrap";
+
+/* navigation elements */
+.wrapper {
+  @include rem-fallback(margin-bottom,2.5rem);
+  @include rem-fallback(padding-bottom,2.2rem);
+
+  h1.logo {
+    @include rem-fallback(margin-top,4rem);
+    @include rem-fallback(margin-bottom,3rem);
+  }
+}
+
+.no-js .wrapper {
+  background: url('/theme/default/img/background.jpg');
+  background-position: top; 
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto;
+}
+
+.canvas-nav {  
+  background-color: $theme-c-color; 
+  width: auto;
+  position: relative;
+  height: auto;
+  padding-top: 0 !important;
+  margin-right: 0 !important;
+  right:0;
+  ul {
+    li {
+      
+      display: inline;
+      list-style-type: none;
+      float: left;
+      a {
+        display: block;
+        @include rem-fallback(font-size,0.8rem);
+        padding: 10px 28px;
+      }
+      &.seperator {
+        width:0px;
+      }
+    }
+
+    li:last-child {
+      a {
+         padding-right:0
+      }
+    }
+  }
+}
+
+.canvas-content {
+    margin-top:0px;
+}
+
+.breadcrumb-wrapper {
+  .inline-list {
+    margin-left:0
+  }
+}
+
+.main-nav {
+    background-color: $theme-c-color; 
+  	nav {
+  		ul {
+  			margin:0;
+  			padding:0;
+  			li {
+  				a:first-child {
+  					padding-left: 0
+  				}
+  				a {
+  					color: #fff;
+  					display:block;
+  					text-transform: uppercase;
+            font-weight: normal;
+            &:hover {
+              color: $theme-b-color;
+            }
+  				}
+  			}
+  		}
+  	}
+}
+
+.home-search {
+
+    max-width: 560px;
+    margin: 0 auto;
+    fieldset { 
+        margin-top: 0;
+    }
+
+    ul.inline-list {
+      margin:0;
+      li {
+        text-transform: uppercase;
+        @include rem-fallback(font-size, 0.700);
+        @include rem-fallback(width, 4.893);
+
+        text-align:center;
+        @include box-shadow(inset 0px -7px 16px -8px lighten($theme-d-color,10%));
+
+        margin-left: 2px;
+        &:first-child {
+          margin-left: 0;
+        }
+
+        background-color:#E9EDF1;
+        background-color:rgba(255,255,255,0.6);
+
+        &.active {
+          box-shadow: none;
+          background-color:rgb(255,255,255);
+          background-color:rgba(255,255,255,0.8);
+        }
+        a {
+          color: $theme-d-color;
+          font-family: 'Open Sans';
+          letter-spacing:0;
+          font-weight: 700;
+          display:block;
+          @include rem-fallback(line-height, 2);
+        }
+      }
+    }
+}
+
+.filter-form-fields, .filter {
+    select {
+        margin:0 !important;
+    }
+}
+
+/* We use this to get basic styling on all basic form elements */
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+select,
+textarea {
+  -webkit-appearance: auto;
+  font-size: 14px;
+}
+
+.footer { 
+  margin-top: 40px;
+  padding-top: 40px !important;
+  clear:both;
+}

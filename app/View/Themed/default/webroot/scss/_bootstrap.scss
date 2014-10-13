@@ -1,0 +1,23 @@
+// Rem calc http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
+@import "rem-fallback";
+@import "alert-boxes";
+
+/* Themes */
+$theme-a-color : #d5e9f4; /* Very Light blue */
+$theme-b-color : #d5e9f4; /* Light blue */
+$theme-c-color : #2c4371; /* Dark blue */
+$theme-d-color : #707070; /* Grey */
+$theme-e-color : #2f9056;
+
+/* Font colours*/
+$body-color : #707070;
+
+/* Include Compass mixins */
+@import "compass/css3/box-shadow";
+@import "compass/css3/transition";
+@import "compass/css3/transform";
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+
+// This includes all of the foundation global elements that are needed to work with any of the other files.
+@import "foundation/variables";

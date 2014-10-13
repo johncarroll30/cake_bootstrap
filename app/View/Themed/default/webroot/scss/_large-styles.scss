@@ -1,0 +1,9 @@
+@import "bootstrap";
+
+.canvas-nav {  
+	ul {
+		&.menu-right {
+			float:right;
+		}
+	}
+}

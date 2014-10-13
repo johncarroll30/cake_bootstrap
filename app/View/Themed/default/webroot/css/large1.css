@@ -1,0 +1,171 @@
+/* Themes */
+/* Very Light blue */
+/* Light blue */
+/* Dark blue */
+/* Grey */
+/* Font colours*/
+/* Include Compass mixins */
+/* @media only screen and (min-width: 1280px) Used to alter styles for screens at least 1280px wide. This is where the grid changes. */
+@media only screen and (min-width: 1280px) {
+  /* Themes */
+  /* Very Light blue */
+  /* Light blue */
+  /* Dark blue */
+  /* Grey */
+  /* Font colours*/
+  /* Include Compass mixins */
+  /* navigation elements */
+  /* line 4, ../scss/_medium-styles.scss */
+  .wrapper {
+    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
+    padding-bottom: 35.2px;
+    padding-bottom: 2.2rem;
+  }
+  /* line 8, ../scss/_medium-styles.scss */
+  .wrapper h1.logo {
+    margin-top: 64px;
+    margin-top: 4rem;
+    margin-bottom: 48px;
+    margin-bottom: 3rem;
+  }
+
+  /* line 14, ../scss/_medium-styles.scss */
+  .no-js .wrapper {
+    background: url("/img/background.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+
+  /* line 24, ../scss/_medium-styles.scss */
+  .canvas-nav {
+    background-color: #2c4371;
+    width: auto;
+    position: relative;
+    height: auto;
+    padding-top: 0;
+  }
+  /* line 31, ../scss/_medium-styles.scss */
+  .canvas-nav ul.menu-right {
+    float: right;
+  }
+  /* line 34, ../scss/_medium-styles.scss */
+  .canvas-nav ul li {
+    font-size: 14.4px;
+    font-size: 0.9rem;
+    display: inline;
+    list-style-type: none;
+    float: left;
+  }
+  /* line 39, ../scss/_medium-styles.scss */
+  .canvas-nav ul li a {
+    display: block;
+  }
+  /* line 42, ../scss/_medium-styles.scss */
+  .canvas-nav ul li.seperator {
+    width: 30px;
+  }
+
+  /* line 49, ../scss/_medium-styles.scss */
+  .canvas-content {
+    margin-top: 0px;
+  }
+
+  /* line 55, ../scss/_medium-styles.scss */
+  .main-nav nav ul {
+    margin: 0;
+    padding: 0;
+  }
+  /* line 59, ../scss/_medium-styles.scss */
+  .main-nav nav ul li:first-child {
+    margin-left: 0;
+  }
+  /* line 62, ../scss/_medium-styles.scss */
+  .main-nav nav ul li a {
+    color: #fff;
+    display: block;
+    line-height: 40px;
+    text-transform: uppercase;
+  }
+
+  /* line 73, ../scss/_medium-styles.scss */
+  .home-search {
+    max-width: 560px;
+    margin: 0 auto;
+  }
+  /* line 77, ../scss/_medium-styles.scss */
+  .home-search fieldset {
+    margin-top: 0;
+  }
+  /* line 81, ../scss/_medium-styles.scss */
+  .home-search ul.inline-list {
+    margin: 0;
+  }
+  /* line 83, ../scss/_medium-styles.scss */
+  .home-search ul.inline-list li {
+    text-transform: uppercase;
+    font-size: 11.2px;
+    font-size: 0.7rem;
+    width: 78.288px;
+    width: 4.893rem;
+    text-align: center;
+    box-shadow: inset 0px -7px 16px -8px #8a8a8a;
+    box-shadow: inset 0px -7px 16px -8px #8a8a8a;
+    box-shadow: inset 0px -7px 16px -8px #8a8a8a;
+    margin-left: 2px;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  /* line 92, ../scss/_medium-styles.scss */
+  .home-search ul.inline-list li:first-child {
+    margin-left: 0;
+  }
+  /* line 98, ../scss/_medium-styles.scss */
+  .home-search ul.inline-list li.active {
+    box-shadow: none;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  /* line 103, ../scss/_medium-styles.scss */
+  .home-search ul.inline-list li a {
+    color: #707070;
+    font-family: 'Open Sans';
+    letter-spacing: 0;
+    font-weight: 700;
+    display: block;
+    line-height: 32px;
+    line-height: 2rem;
+  }
+
+  /* We use this to get basic styling on all basic form elements */
+  /* line 116, ../scss/_medium-styles.scss */
+  input[type="text"],
+  input[type="password"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="month"],
+  input[type="week"],
+  input[type="email"],
+  input[type="number"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="time"],
+  input[type="url"],
+  select,
+  textarea {
+    -webkit-appearance: auto;
+    font-size: 14px;
+  }
+
+  /* Themes */
+  /* Very Light blue */
+  /* Light blue */
+  /* Dark blue */
+  /* Grey */
+  /* Font colours*/
+  /* Include Compass mixins */
+}

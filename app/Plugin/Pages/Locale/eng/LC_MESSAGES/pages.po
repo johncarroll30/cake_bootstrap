@@ -1,0 +1,229 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Pages plugin\n"
+"POT-Creation-Date: 2011-04-10 02:46+0300\n"
+"PO-Revision-Date: 2011-04-10 02:54+0200\n"
+"Last-Translator: \n"
+"Language-Team: language team\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: \pages_app_controller.php:8
+msgid "Invalid link requested data."
+msgstr "Invalid link requested data."
+
+#: \pages_app_controller.php:13
+msgid "The information requested does not exist."
+msgstr "The information requested does not exist."
+
+#: \pages_app_controller.php:18
+msgid "Error data."
+msgstr "Error data."
+
+#: \controllers\pages_controller.php:99
+msgid "Page saved successfully."
+msgstr "Page saved successfully."
+
+#: \controllers\pages_controller.php:102
+msgid "Error saving page. Please try again."
+msgstr "Error saving page. Please try again."
+
+#: \controllers\pages_controller.php:112
+msgid "Changes saved successfully."
+msgstr "Changes saved successfully."
+
+#: \controllers\pages_controller.php:115
+msgid "Changes can not be saved. Please try again."
+msgstr "Changes can not be saved. Please try again."
+
+#: \controllers\pages_controller.php:128
+msgid "Page successfully removed."
+msgstr "Page successfully removed."
+
+#: \controllers\pages_controller.php:130
+msgid "Error deleting page."
+msgstr "Error deleting page."
+
+#: \controllers\pages_controller.php:140
+msgid "Item status successfully changed."
+msgstr "Item status successfully changed."
+
+#: \controllers\pages_controller.php:142
+msgid "Status was not changed because of an error."
+msgstr "Status was not changed because of an error."
+
+#: \models\page.php:73
+msgid "This field can not be empty."
+msgstr "This field can not be empty."
+
+#: \views\elements\admin\paginator.ctp:4;4
+msgid "previous"
+msgstr "previous"
+
+#: \views\elements\admin\paginator.ctp:6;6
+msgid "next"
+msgstr "next"
+
+#: \views\elements\admin\paginator_counter.ctp:4
+msgid "Page %page%. Total pages - %pages%. Showing - %current% of %count%."
+msgstr "Page %page%. Total pages - %pages%. Showing - %current% of %count%."
+
+#: \views\pages\admin_add.ctp:2
+#: \views\pages\admin_index.ctp:7
+msgid "New page"
+msgstr "New page"
+
+#: \views\pages\admin_add.ctp:7
+#: \views\pages\admin_edit.ctp:7
+msgid "Use the form below to create a new page."
+msgstr "Use the form below to create a new page."
+
+#: \views\pages\admin_add.ctp:14
+#: \views\pages\admin_edit.ctp:16
+msgid "Page data"
+msgstr "Page data"
+
+#: \views\pages\admin_add.ctp:20
+#: \views\pages\admin_edit.ctp:22
+#: \views\pages\admin_index.ctp:21
+msgid "Title"
+msgstr "Title"
+
+#: \views\pages\admin_add.ctp:28
+#: \views\pages\admin_edit.ctp:30
+#: \views\pages\admin_index.ctp:27
+msgid "Layout"
+msgstr "Layout"
+
+#: \views\pages\admin_add.ctp:31
+#: \views\pages\admin_edit.ctp:33
+#: \views\pages\admin_index.ctp:49
+msgid "Default"
+msgstr "Default"
+
+#: \views\pages\admin_add.ctp:36
+#: \views\pages\admin_edit.ctp:38
+msgid "Content"
+msgstr "Content"
+
+#: \views\pages\admin_add.ctp:44
+#: \views\pages\admin_edit.ctp:46
+msgid "Meta keywords"
+msgstr "Meta keywords"
+
+#: \views\pages\admin_add.ctp:52
+#: \views\pages\admin_edit.ctp:54
+msgid "Meta description"
+msgstr "Meta description"
+
+#: \views\pages\admin_add.ctp:60
+#: \views\pages\admin_edit.ctp:62
+msgid "Frendly URL (empty for auto generate)"
+msgstr "Frendly URL (empty for auto generate)"
+
+#: \views\pages\admin_add.ctp:71
+#: \views\pages\admin_edit.ctp:73
+msgid "Save"
+msgstr "Save"
+
+#: \views\pages\admin_add.ctp:72
+#: \views\pages\admin_edit.ctp:74
+msgid "Cancel"
+msgstr "Cancel"
+
+#: \views\pages\admin_edit.ctp:2
+msgid "Edit page"
+msgstr "Edit page"
+
+#: \views\pages\admin_index.ctp:2
+msgid "Manage of content pages"
+msgstr "Manage of content pages"
+
+#: \views\pages\admin_index.ctp:10
+msgid "List of pages"
+msgstr "List of pages"
+
+#: \views\pages\admin_index.ctp:24
+msgid "Link to the page"
+msgstr "Link to the page"
+
+#: \views\pages\admin_index.ctp:30
+msgid "Status"
+msgstr "Status"
+
+#: \views\pages\admin_index.ctp:33
+msgid "Action"
+msgstr "Action"
+
+#: \views\pages\admin_index.ctp:46
+msgid "Click to the view this page"
+msgstr "Click to the view this page"
+
+#: \views\pages\admin_index.ctp:53
+msgid "Disable"
+msgstr "Disable"
+
+#: \views\pages\admin_index.ctp:53
+msgid "Enable"
+msgstr "Enable"
+
+#: \views\pages\admin_index.ctp:55
+msgid "Enabled. Click to disable."
+msgstr "Enabled. Click to disable."
+
+#: \views\pages\admin_index.ctp:55
+msgid "Disable. Click to enable."
+msgstr "Disable. Click to enable."
+
+#: \views\pages\admin_index.ctp:60
+msgid "Edit"
+msgstr "Edit"
+
+#: \views\pages\admin_index.ctp:62
+msgid "Click to edit"
+msgstr "Click to edit"
+
+#: \views\pages\admin_index.ctp:65
+msgid "Delete"
+msgstr "Delete"
+
+#: \views\pages\admin_index.ctp:67
+msgid "Click to delete"
+msgstr "Click to delete"
+
+#: \views\pages\admin_index.ctp:68
+msgid "Are you sure you want to delete the page \"% s\"?"
+msgstr "Are you sure you want to delete the page \"% s\"?"
+
+#~ msgid "Plugin installation shell"
+#~ msgstr "Plugin installation shell"
+#~ msgid "%s could not be loaded"
+#~ msgstr "%s could not be loaded"
+#~ msgid "Schema is up to date."
+#~ msgstr "Schema is up to date."
+#~ msgid "The following table(s) will be dropped."
+#~ msgstr "The following table(s) will be dropped."
+#~ msgid "Dropping table(s)."
+#~ msgstr "Dropping table(s)."
+#~ msgid "The following table(s) will be created."
+#~ msgstr "The following table(s) will be created."
+#~ msgid "Are you sure you want to create the table(s)?"
+#~ msgstr "Are you sure you want to create the table(s)?"
+#~ msgid "Creating table(s)."
+#~ msgstr "Creating table(s)."
+#~ msgid "End create."
+#~ msgstr "End create."
+#~ msgid "Sql could not be run"
+#~ msgstr "Sql could not be run"
+#~ msgid "%s is up to date."
+#~ msgstr "%s is up to date."
+#~ msgid "%s updated."
+#~ msgstr "%s updated."
+

@@ -1,0 +1,706 @@
+@import "font-icons";
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,700,800,900,600,500);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,800);
+
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+// Normailize
+@import "normalize";
+
+// Functions bootstrap
+@import "bootstrap";
+
+// Foundation Components
+@import
+"foundation/components/global",
+"foundation/components/grid",
+"foundation/components/grid-5",
+"foundation/components/visibility",
+//"foundation/components/block-grid",
+"foundation/components/type",
+"foundation/components/buttons",
+"foundation/components/forms",
+"foundation/components/button-groups",
+//"foundation/components/dropdown-buttons",
+//"foundation/components/split-buttons",
+//"foundation/components/flex-video",
+//"foundation/components/section",
+//"foundation/components/top-bar",
+//"foundation/components/orbit",
+//"foundation/components/reveal",
+//"foundation/components/joyride",
+//"foundation/components/clearing",
+"foundation/components/alert-boxes",
+"foundation/components/breadcrumbs",
+//"foundation/components/custom-forms",
+//"foundation/components/keystrokes",
+//"foundation/components/labels",
+"foundation/components/inline-lists"
+//"foundation/components/pagination",
+//"foundation/components/panels",
+//"foundation/components/pricing-tables",
+//"foundation/components/progress-bars",
+//"foundation/components/side-nav",
+//"foundation/components/sub-nav",
+//"foundation/components/switch",
+//"foundation/components/magellan",
+//"foundation/components/tables",
+//"foundation/components/thumbs",
+//"foundation/components/tooltips",
+//"foundation/components/dropdown"
+;
+
+@import "cookie";
+
+
+/* Canvas mixin */
+@mixin canvas-transition() {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+body {
+    background: $theme-b-color;
+}
+
+.main-nav {
+    z-index:1000;
+}
+
+.home-search {
+    fieldset { 
+        background-color:rgb(255,255,255);
+        background-color:rgba(255,255,255,0.8);
+        border-bottom: 2px solid $theme-c-color;
+        margin-bottom:0;
+    }
+    .go {
+        width: 100%;
+    }
+}
+
+.property {
+    background-color:#fff;
+    margin-bottom:20px;
+    .property-image-wrap {
+        position: relative;
+        clear:both;
+        display:block;
+        h1,h2,h3,h4,h5,h6 {
+            margin:0;
+            padding:0;
+        }
+        h4 {
+            @include rem-fallback(font-size, 0.750);
+        }
+        .property-label {
+            position:absolute;
+            width:100%;
+            bottom:0;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 9px 5px;
+            &.featured {
+                color: $theme-c-color;
+                background-color: #ffd32f;
+            }
+            &.special-offer {
+                color: #fff;
+                background-color: #f6ab32;
+            }
+        }
+    }
+    .property-content {
+        padding:15px;
+         h4 {
+            margin:0 0 10px 0;
+            padding:0;
+            text-transform: uppercase;
+            color: $theme-d-color;
+             @include rem-fallback(font-size, 0.75);
+        }
+        p {
+            @include rem-fallback(font-size, 0.813);
+            @include rem-fallback(line-height, 1.063);
+            margin-bottom:0;
+            &.view a {
+                color: $theme-c-color;
+                 @include rem-fallback(font-size, 0.950);
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.subnav-block, .content-block {
+     
+    background-color:rgb(255,255,255);
+    background-color:rgba(255,255,255,0.8);
+    margin-bottom:20px;
+
+    .subnav-content, .page-content {
+        padding:15px;
+         h4 {
+            margin:0 0 10px 0;
+            padding:0;
+            text-transform: uppercase;
+            color: $theme-d-color;
+             @include rem-fallback(font-size, 0.75);
+        }
+        p {
+            @include rem-fallback(font-size, 0.813);
+            @include rem-fallback(line-height, 1.063);
+            margin-bottom:0;
+            &.view a {
+                color: $theme-c-color;
+                 @include rem-fallback(font-size, 0.950);
+                font-weight: 700;
+            }
+        }
+        fieldset {
+            background: #fff;
+            @include border-radius($global-radius);
+        }
+    }
+    .inline-list {
+         @include rem-fallback(font-size, 0.85);
+         font-weight: 700;
+    }
+}
+
+.radio-block {
+    margin-top: 10px;
+    small a {
+        color: $body-color;
+    }
+}
+
+/* Off canvas menu */
+$offcanvas-menu-width : 230px;
+
+/* Nav items */
+$main-nav-height : 80px;
+
+.mobile-nav-bar {
+    position: absolute;
+    left: -40px;
+    top: 23px;
+    #menu {
+        border:0;
+        margin:0;
+        background: none;
+        @include rem-fallback(font-size, 1.375);
+        font-weight: normal;
+        padding:9px;
+        background-color: darken($theme-c-color,5%);
+        @include border-radius($global-radius 0 0 $global-radius);
+        box-shadow: none;
+    }
+    span {
+        display:none;
+    }
+}
+
+.canvas-nav { 
+
+    $canvas-nav-padding: 20px;
+    width: $offcanvas-menu-width;
+    background-color: $theme-c-color; 
+    right: -$offcanvas-menu-width;
+    @include box-shadow(inset 13px 0px 30px -14px darken($theme-c-color,10%));
+    position: fixed;
+    z-index: 1000;
+    top:0;
+    bottom:0;
+    height: 10000px;
+    padding-top: 10px;
+
+    a {
+        color: #fff;
+    }
+    & ul {
+        list-style: none;
+        margin:0;
+        li {
+            text-transform: uppercase;
+            display:block;
+            a {
+                display: block;
+                padding: ($canvas-nav-padding - 10) $canvas-nav-padding;
+                font-weight:bold;
+                @include rem-fallback(font-size, 0.875);
+
+            }
+        }
+    }
+
+}
+
+.canvas-content {
+    margin-top:20px;
+    z-index: 0;
+}
+
+.breadcrumb-wrapper {
+    background-color: rgb(255,255,255);
+    background-color: rgba(255,255,255,0.7);
+     padding: 10px;
+        margin-bottom:20px;
+        width:100%;
+        clear: both;
+    .inline-list {
+      margin-bottom:0;
+      @include rem-fallback(font-size, 0.800);
+      &.breadcrumb {
+          a {
+            font-weight: bold;
+          }
+      }
+    }
+}
+
+.check-in-date {
+    background-image: url('/theme/default/img/icon-calendar.gif');
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+/* Errors */
+
+$error-color: #d54b6b;
+
+.error-message {
+    position: relative;
+    background: $error-color;
+    padding: 8px 10px;
+    color: #fff;
+    font-size: 13px;
+    border-radius: (5px);
+    margin-bottom: 10px;
+}
+.error-message:after, .error-message:before {
+    bottom: 100%;
+    left: 10%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+.error-message:after {
+    border-color: rgba(213, 75, 107, 0);;
+    border-bottom-color: $error-color;
+    border-width: 14px;
+    margin-left: -14px;
+}
+.error-message:before {
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #ffffff;
+    border-width: 17px;
+    margin-left: -17px;
+}
+.form-error {
+    border: 1px solid $error-color !important;
+}
+
+
+/* We use this to get basic styling on all basic form elements */
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+select,
+textarea {
+    -webkit-appearance: none;
+    font-size: 16px;
+}
+
+::-ms-expand { 
+    display: none 
+}
+
+::-webkit-input-placeholder {
+   color: #808080;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #808080;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #808080;  
+}
+
+:-ms-input-placeholder {  
+   color: #808080;  
+}
+
+select {
+   color: #808080;  
+}
+
+.filter-properties {
+    fieldset {
+        background-color: rgb(255,255,255);
+        background-color: rgba(255,255,255,0.8);
+        margin:0;
+    }
+}
+
+form.filter {
+
+    background-color: rgb(255,255,255);
+    background-color: rgba(255,255,255,0.8);
+    hr {
+        margin: 20px 0;
+    }
+    fieldset {
+        margin: 0;
+    }
+}
+
+#map-canvas {
+    height: 0px; 
+    margin: 0; 
+    padding: 0;
+    width:100%;
+    
+}
+.map .show {
+    height: 500px !important;
+}
+
+.listing-block, .listing-content {
+     p {
+        @include rem-fallback(font-size, 0.9);
+    }
+}
+
+.listing-block {
+    background-color: white;
+    padding: 20px;
+}
+.listing-content {
+    h2 {
+        margin-bottom: 0;
+    }
+    h4 {
+        color: #707070;
+        text-transform: uppercase;
+        @include rem-fallback(font-size, 0.85);
+        margin-top: 15px;
+        font-weight: normal;
+    }
+
+    .listing-details {
+        @include rem-fallback(font-size, 0.9);
+        dd {
+            color:  $theme-c-color;
+            margin: 0;
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+    .price {
+        margin: 20px 0;
+        display: inline-block;
+        padding: 10px 20px;
+        background: $theme-a-color;
+        border: 2px solid $theme-c-color;
+        color: $theme-c-color;
+        font-weight: bold;
+    }
+}
+.listing-sidenav {
+    background-color: white;
+    margin-bottom: 0;
+    list-style: none;
+        li  { 
+            a {
+            padding: 10px 15px;
+            display: block;
+            font-weight:bold;
+        }
+        &.active {
+            background-color: #d5d9e3
+        }
+    }
+    .arrow {
+        margin-top:5px;
+    }
+   
+}
+
+.block {
+    padding:10px 20px;
+    margin-bottom: 20px;
+    display:block;
+    width:100%;
+    clear:both;
+    .button {
+        margin:0;
+        padding:15px;
+         @include border-radius(0);
+         border:0;
+         background-color: #bfc6d4; 
+         font-weight: normal;
+         &.active {
+            background-color: $theme-c-color;
+         }
+    }
+    p {
+        margin: 0
+    }
+    &.theme-a {
+        background-color: rgb(255, 255, 255);
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    &.theme-b {
+        background-color: $theme-c-color;
+        a {
+            color: #fff;
+            font-weight:  bold;
+        }
+    }
+    &.theme-c {
+        background-color: rgb(255, 255, 255);
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    &.theme-e {
+        background-color: $theme-e-color;
+        text-align: center;
+         a {
+            color: #fff;
+            font-weight:  bold;
+        }
+    }
+}
+.property-preview {
+    margin:10px 0 !important;
+    h4 {
+        margin: 0;
+        @include rem-fallback(font-size, 0.9);
+    }
+    h5 {
+        margin-top: 5px;
+        @include rem-fallback(font-size, 0.65);
+        font-size: uppercase;
+        color: $theme-d-color;
+        text-transform: uppercase;
+    }
+}
+.replace {
+    span {
+        display: none;
+    }
+}
+.radius {
+    @include border-radius($global-radius);
+}
+.fullwidth {
+    width: 100%;
+}
+.bg-shade {
+    padding-top:30px;
+    background: #e2f0f7; /* Old browsers */
+    background: -moz-linear-gradient(top,  #e2f0f7 0%, #d5e9f4 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e2f0f7), color-stop(100%,#d5e9f4)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #e2f0f7 0%,#d5e9f4 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #e2f0f7 0%,#d5e9f4 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #e2f0f7 0%,#d5e9f4 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #e2f0f7 0%,#d5e9f4 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2f0f7', endColorstr='#d5e9f4',GradientType=0 ); /* IE6-9 */
+}
+ul.v-social-icons {
+    list-style:none;
+    li {
+        
+        a {
+            .icon {
+                color: lighten($theme-d-color,30%);
+                margin-right:5px;
+            }
+            color: $theme-d-color;
+            @include rem-fallback(font-size, 0.75);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+}
+.block-blockquote {
+    blockquote {
+         border:0 !important;
+         color: $theme-c-color;
+         padding:0;
+         @include rem-fallback(font-size, 1);
+    }
+    small {
+        text-transform: uppercase;
+        text-align: right;
+        float: right;
+        margin:5px 0
+    }
+    hr {
+        margin:0 0 10px 0;
+    }
+}
+.clear {
+    clear: both;
+}
+.margintop20 {
+    margin-top: 20px;
+}
+.nomargintop {
+    margin-top: 0;
+}
+.nomarginleft {
+    margin-left: 0;
+}
+.nomarginright {
+    margin-right: 0;
+}
+.nomarginbottom {
+    margin-bottom: 0;
+}
+.nomargin {
+    margin:0
+}
+
+/* Strictly for mobile only */
+@media only screen 
+and (max-width : $small-screen - 1) {
+
+    .filter-expand {
+        display:block;
+        background-color: $theme-c-color;
+        margin:0px 0 0;
+        padding:0 10px;
+        @include rem-fallback(line-height, 2.2);
+        @include rem-fallback(font-size, 0.9);
+        overflow:hidden;
+         @include box-shadow(inset 0px 13px 30px -14px darken($theme-c-color,20%));
+        &.top {
+         width:100%;
+        }
+        &.bottom {
+            @include border-radius(0 0 $global-radius $global-radius);
+        }
+        color: #fff;
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    .filter-properties {
+        overflow:hidden;
+        position:relative;
+        margin-bottom: 20px;
+
+        //@include canvas-transition();
+        //@include transform(translate3d(0, height, 0) scale3d(1, 1, 1));
+
+        &.filter-off {
+            height: 0px;
+        }
+        &.filter-on {
+           /* &.filter-category {
+               @include rem-fallback(height, 19.0);
+            }*/
+        }
+    }
+
+    .breadcrumb-wrapper {
+        margin-top:20px;
+        width:100%;
+    }
+
+   
+    .no-csstransforms3d.no-csstransitions, 
+    .csstransforms3d.no-csstransitions,
+    .no-csstransforms3d.csstransitions {
+        .on {
+            .canvas-nav {
+                margin-right: 0;
+            }
+            .canvas-content, .mobile-nav-bar {
+                margin-left: -$offcanvas-menu-width;
+                margin-right: $offcanvas-menu-width;
+            } 
+
+        }
+        .off {
+            .canvas-nav {
+                margin-right: -$offcanvas-menu-width;
+            }
+            .canvas-content, .mobile-nav-bar {
+                margin-right: 0;
+            } 
+        }
+    }
+
+
+    .csstransforms3d.csstransitions {
+        .canvas-content, .canvas-nav {
+            @include canvas-transition();
+        }
+        .canvas-nav {
+            right:   -$offcanvas-menu-width
+        }
+        .on {
+
+            .canvas-nav, .canvas-content {
+                @include transform(translate3d(-$offcanvas-menu-width, 0, 0) scale3d(1, 1, 1));
+                @include transform-origin(0px,0%);
+            }
+        }
+
+    }
+}
+/* End strictly for mobile only */
+
+.footer {
+    padding:20px 0;
+    background-color: $theme-c-color;
+    a {
+        color: $theme-a-color;
+    }
+    p {
+        @include rem-fallback(font-size, 0.80);
+    }
+    p,small {
+        color:#fff;
+    }
+    h2,h3,h4,h5 {
+        color: $theme-a-color;
+    }
+    form {
+        margin:0;
+        margin-top:20px;
+    }
+    hr {
+        margin-top: 0;
+        border: 1px solid darken($theme-c-color,5%);
+    }
+    ul.social-icons li {
+        @include rem-fallback(font-size, 1.8);
+        margin-left:20px;
+        a {
+            color: white
+        }
+    }
+}
+
