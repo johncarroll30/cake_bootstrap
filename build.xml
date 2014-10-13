@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project name="CakePHP" default="build">
 	<!--
-	Build.xml file for CakePHP
+	Build.xml file for CakePHP test
 
 	Uses phing to create releases, and pear packages.
 	Based off of build.xml in doctrine.
